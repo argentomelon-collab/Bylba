@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой первый сайт</title>
+    <title>Моя Галерея</title>
     <style>
         body {
             font-family: sans-serif;
@@ -19,7 +19,7 @@
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             max-width: 400px;
-            margin: 0 auto;
+            margin: 0 auto 40px auto; /* Отступ снизу до галереи */
         }
         h1 { color: #4caf50; }
         p { color: #b0bec5; font-size: 1.1rem; }
@@ -33,14 +33,46 @@
             margin-top: 15px;
             font-weight: bold;
         }
+        
+        /* Стили для блока с фотками */
+        .gallery-title {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            color: #ff9800;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column; /* Картинки будут идти друг за другом вниз */
+            gap: 20px; /* Расстояние между фотками */
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .gallery img {
+            width: 100%; /* Растягивает фото по ширине экрана */
+            border-radius: 12px; /* Красивые скругленные углы */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Твой старый блок -->
     <div class="card">
         <h1>Привет из интернета! 🚀</h1>
         <p>Я школьник, и я создал этот сайт сам прямо со своего телефона!</p>
         <a href="#" class="btn" onclick="alert('Работает!')">Жми сюда</a>
+    </div>
+
+    <!-- Новый блок: Заголовок галереи -->
+    <h2 class="gallery-title">Мои любимые фотки 👇</h2>
+
+    <!-- Блок с картинками -->
+    <div class="gallery">
+        <!-- Замени ссылки ниже на свои ссылки из ImgBB -->
+        <img src="https://i.ibb.co/GvrxM4Tg/IMG-20250623-142547.jpg"
+        <img src="https://ibb.co" alt="Фото 2">
+        <img src="https://ibb.co" alt="Фото 3">
     </div>
 
 </body>
